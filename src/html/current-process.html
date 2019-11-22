@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current process</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<section class="goals">
+    <div id="minor"></div>
+
+    <div class="goals__content current-process">
+        <div class="header">
+            <div class="header__title-wrapper">
+                <img src="../img/innovation.svg" alt="" class="header__img">
+                <h1 class="header__title">Поточні процедури</h1>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <table class="current-process__table">
+                <tr class="current-process__head-row">
+                    <td class="current-process__th">Назва процедури</td>
+                    <td class="current-process__th">Статус на котором находится оценочная форма</td>
+                    <td class="current-process__th">Дата завершения процедуры</td>
+                </tr>
+                <tr class="current-process__description-row">
+                    <td class="current-process__td"><a href="#">Процедура постановки цілей 2019.</a></td>
+                    <td class="current-process__td">Заповнення співробітником</td>
+                    <td class="current-process__td">31.03.2019</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+<script>
+    $("#minor").load("../../index.html .minor");
+</script>

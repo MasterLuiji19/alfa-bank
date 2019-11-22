@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print-popup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<div class="save-popup__wrapper show">
+    <div class="save-popup">
+        <img src="../img/save.svg" alt="">
+        <p class="save-popup__text">Рекомендуємо зберегти анкету, щоб уникнути втрати даних</p>
+        <div class="save-popup__btn-wrapper">
+            <button class="save-popup__save" onclick="hidePopup()">Зберегти</button>
+            <button class="save-popup__decline" onclick="hidePopup()">Відхилити</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    showPopup();
+    function showPopup() {
+        $('.save-popup__wrapper').toggle('show');
+    }
+
+    function hidePopup() {
+        $('.save-popup__wrapper').toggle('show');
+    }
+
+    document.body.addEventListener('click', () => {
+        if (event.target === document.querySelector('.save-popup__wrapper')) {
+            hidePopup();
+        }
+    })
+</script>

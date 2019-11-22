@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finished process</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<section class="goals">
+    <div id="minor"></div>
+    <div class="goals__content current-process">
+        <div class="header">
+            <div class="header__title-wrapper">
+                <img src="../img/risk_big.svg" alt="" class="header__img">
+                <h1 class="header__title">Завершені процедури</h1>
+            </div>
+        </div>
+        <div class="filters">
+            <div class="info-wrapper">
+                <div class="info-employee">
+                    <div class="info-employee__header" onclick="periodChecking()">
+                        <span class="info-employee__header_name filters__period">Фільтр “Період оцінки”</span>
+                        <img class="arrow info-period-arrow" src="../img/Vector.svg" alt="">
+                    </div>
+                    <div class="info-employee__dropdown">
+                        <div class="wrap-row checkbox-row">
+                            <span class="row-item_left">Постановка</span>
+                            <input type="checkbox" class="checkbox__period uncheck">
+                        </div>
+                        <div class="wrap-row checkbox-row">
+                            <span class="row-item_left">Корегування</span>
+                            <input type="checkbox" class="checkbox__period uncheck">
+                        </div>
+                        <div class="wrap-row checkbox-row">
+                            <span class="row-item_left">Оцінка</span>
+                            <input type="checkbox" class="checkbox__period uncheck">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-wrapper">
+                <div class="info-employee">
+                    <div class="info-employee__header info-year-filter" onclick="yearChecking()">
+                        <span class="info-employee__header_name filters__year">Фільтр “Рік оцінки”</span>
+                        <img class="arrow info-year-arrow" src="../img/Vector.svg" alt="">
+                    </div>
+                    <div class="info-employee__dropdown info-year__dropdown">
+                        <div class="wrap-row checkbox-row">
+                            <span class="row-item_left">2018 p.</span>
+                            <input type="checkbox" class="checkbox__year uncheck">
+                        </div>
+                        <div class="wrap-row checkbox-row">
+                            <span class="row-item_left">2019 p.</span>
+                            <input type="checkbox" class="checkbox__year uncheck">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="labels-filter">
+            <div class="label-filter__period"></div>
+            <div class="label-filter__year"></div>
+        </div>
+        <button class="show-list">Показати список</button>
+        <div class="wrap">
+            <table class="finished-process__table">
+                <tr class="finished-process__head-row">
+                    <td class="finished-process__th">Назва процедури</td>
+                    <td class="finished-process__th">Статус на якому знаходиться оціночна форма</td>
+                    <td class="finished-process__th">Дата завершення процедури</td>
+                </tr>
+                <tr class="finished-process__description-row">
+                    <td class="finished-process__td"><a href="">Процедура постановки цілей 2019.</a></td>
+                    <td class="finished-process__td">Заповнення співробітником</td>
+                    <td class="finished-process__td">31.03.2019</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+<script>
+    $("#minor").load("../../index.html .minor");
+
+    document.querySelector('.info-employee__header').addEventListener('click', () => {
+        document.querySelector('.info-employee__dropdown').classList.toggle('show-dropdown');
+        document.querySelector('.arrow').classList.toggle('arrow-show');
+    });
+
+
+    document.querySelector('.info-year-filter').addEventListener('click', () => {
+        document.querySelector('.info-year__dropdown').classList.toggle('show-dropdown');
+        document.querySelector('.info-year-arrow').classList.toggle('arrow-show');
+    });
+
+    function periodChecking() {
+        if ($('.arrow').hasClass('arrow-show')) {
+            let checkboxList = [...$('.checkbox__period')];
+            checkboxList.map((el) => {
+                if (el.checked) {
+                    $('.label-filter__period').append(`<span class="label-filter">${el.previousElementSibling.textContent}</span>`);
+                }
+            });
+        } else {
+            $('.label-filter__period').children().remove();
+        }
+    }
+
+    function yearChecking() {
+        if ($('.arrow').hasClass('arrow-show')) {
+            let checkboxList = [...$('.checkbox__year')];
+            checkboxList.map((el) => {
+                if (el.checked) {
+                    $('.label-filter__year').append(`<span class="label-filter">${el.previousElementSibling.textContent}</span>`);
+                }
+            });
+        } else {
+            $('.label-filter__year').children().remove();
+        }
+    }
+
+    document.body.addEventListener('click', () => {
+        if ($(event.target).hasClass('label-filter')) {
+            let currentUncheck = event.target.textContent;
+            let x = [...$('.uncheck')];
+            x.map((el) => {
+                if (el.previousElementSibling.textContent === currentUncheck) {
+                    let index = [...$('.uncheck')].indexOf(el);
+                    $('.uncheck')[index].checked = false;
+                }
+            });
+            $(event.target).remove();
+        }
+    });
+</script>

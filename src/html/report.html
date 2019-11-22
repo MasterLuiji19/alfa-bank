@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+    <link rel="stylesheet" href="../css/report.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section class="report">
+        <div class="report-wrap">
+            <div class="report-header">
+                <h1 class="report-header__title">Звіт "Управління оціночними формами"</h1>
+                <div class="report-header__filters">
+                    <div class="filters-wrap">
+                        <div class="report-filter">
+                            <div class="report-filter__header">
+                                <span class="report-filter__header_name">Рік проведення процедури</span>
+                                <img class="report-filter__header_arrow" src="../img/Vector.svg" alt="">
+                            </div>
+                            <div class="report-filter__dropdown">
+                                <div class="wrap-row">
+                                    <span class="row-item_left">2018</span>
+                                    <input type="checkbox" class="checkbox__year uncheck">
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">2019</span>
+                                    <input type="checkbox" class="checkbox__year uncheck">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-filter">
+                            <div class="report-filter__header">
+                                <span class="report-filter__header_name">Етап процедури</span>
+                                <img class="report-filter__header_arrow" src="../img/Vector.svg" alt="">
+                            </div>
+                            <div class="report-filter__dropdown">
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Постановка</span>
+                                    <input type="checkbox" class="checkbox__period uncheck">
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Коригування</span>
+                                    <input type="checkbox" class="checkbox__period uncheck">
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Оцінка</span>
+                                    <input type="checkbox" class="checkbox__period uncheck">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report-filter">
+                            <div class="report-filter__header">
+                                <span class="report-filter__header_name">Статус оціночної форми</span>
+                                <img class="report-filter__header_arrow" src="../img/Vector.svg" alt="">
+                            </div>
+                            <div class="report-filter__dropdown">
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Погоджено</span>
+                                    <input type="checkbox" class="checkbox__status uncheck">
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Прострочено</span>
+                                    <input type="checkbox" class="checkbox__status uncheck">
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Не підтверджено</span>
+                                    <input type="checkbox" class="checkbox__status uncheck">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="labels-wrap">
+                        <div class="report-label__year"></div>
+                        <div class="report-label__period"></div>
+                        <div class="report-label__status"></div>
+                    </div>
+                </div>
+                <div class="report-header__input_filters">
+                    <div class="input-filter">
+                        <span class="input-filter__name">Група співробітників</span>
+                        <input class="input-filter__input_group" type="text" disabled="disabled">
+                        <label class="form-button">...</label>
+                    </div>
+                    <div class="input-filter">
+                        <span class="input-filter__name">ПІБ співробітника</span>
+                        <input class="input-filter__input_user" type="text" disabled="disabled">
+                        <label class="form-button">...</label>
+                    </div>
+                </div>
+                <div class="report-header__build-report">
+                    <div class="build-report button">Побудувати звіт</div>
+                </div>
+            </div>
+            <div class="report-content">
+                <div class="report-content__buttons">
+                    <div class="select-all button">Виділити всіх співробітників</div>
+                    <div class="open-form button">Відкрити форму для редагування співробітнику</div>
+                    <div class="save-comment button">Зберегти коментар</div>
+                    <div class="export-excel button">Експорт в Excel</div>
+                </div>
+                <table class="report-content__table">
+                    <thead class="report-content__table_header">
+                        <tr>
+                            <td></td>
+                            <td>ПІБ</td>
+                            <td>Етап процедури</td>
+                            <td>Статус оціночної форми</td>
+                            <td>Опитування співробітника по потенціалу</td>
+                            <td>Опитування керівника по потенціалу підлеглого</td>
+                            <td>Опитування керівника по ключовим посадам підлеглого</td>
+                            <td>Зворотній зв'язок</td>
+                            <td>Коментар</td>
+                        </tr>
+                    </thead>
+                    <tbody class="report-content__table_tbody">
+                        <tr class="report-content__tbody_tr">
+                            <td><input type="checkbox" class="checkbox-table"></td>
+                            <td>Іванов Іван Іванович</td>
+                            <td>Постановка цілей</td>
+                            <td>Прострочено</td>
+                            <td>Призначено</td>
+                            <td>Заповнено</td>
+                            <td>Не призначено</td>
+                            <td>3/5</td>
+                            <td>Текст коментаря, який можуть ввести адміністратори та співробітники із роллю HR BP.</td>
+                        </tr>
+                        <tr class="report-content__tbody_tr">
+                            <td><input type="checkbox" class="checkbox-table"></td>
+                            <td>Іванов Іван Іванович</td>
+                            <td>Постановка цілей</td>
+                            <td>Прострочено</td>
+                            <td>Призначено</td>
+                            <td>Заповнено</td>
+                            <td>Не призначено</td>
+                            <td>3/5</td>
+                            <td>Текст коментаря, який можуть ввести адміністратори та співробітники із роллю HR BP.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <div class="popup-group">
+        <div class="popup__wrap">
+            <div class="popup__title">
+                <span class="popup__name">Шкала оцінювання компетенції</span>
+            </div>
+            <table class="popup-table">
+                <thead class="popup-table__header">
+                    <tr>
+                        <td></td>
+                        <td>Назва групи</td>
+                        <td>Коментар</td>
+                    </tr>
+                </thead>
+                <tbody class="popup-table__tbody">
+                    <tr>
+                        <td><input type="checkbox" class="input-group"></td>
+                        <td>"Продавці"</td>
+                        <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                        ширину клітинки в таблиці</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="input-group"></td>
+                        <td>"Пакувальники"</td>
+                        <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                            ширину клітинки в таблиці</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="input-group"></td>
+                        <td>"Молодці"</td>
+                        <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                            ширину клітинки в таблиці</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="input-group"></td>
+                        <td>"Сміхунці"</td>
+                        <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                            ширину клітинки в таблиці</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons-popup">
+                <div class="button-apply1">Застосувати</div>
+                <div class="button-cancel_group">Відмінити</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-user">
+        <div class="popup__wrap">
+            <div class="popup__title">
+                <span class="popup__name">Шкала оцінювання компетенції</span>
+            </div>
+            <table class="popup-table">
+                <thead class="popup-table__header">
+                <tr>
+                    <td></td>
+                    <td>ПІБ користувача</td>
+                    <td>Коментар</td>
+                </tr>
+                </thead>
+                <tbody class="popup-table__tbody">
+                <tr>
+                    <td><input type="checkbox" class="input-user"></td>
+                    <td>Тихонець Людмила Михайлівна</td>
+                    <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                        ширину клітинки в таблиці</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="input-user"></td>
+                    <td>Зарічний Олег Миколайович</td>
+                    <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                        ширину клітинки в таблиці</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="input-user"></td>
+                    <td>Сидоренко Артем Андрійович</td>
+                    <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                        ширину клітинки в таблиці</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="input-user"></td>
+                    <td>Ламана Олена Олександрівна</td>
+                    <td>Довгий коментар який ніхто не читає, але показуе довжину або
+                        ширину клітинки в таблиці</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="buttons-popup">
+                <div class="button-apply2">Застосувати</div>
+                <div class="button-cancel_user">Відмінити</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+//filters
+    let arrows = [...document.querySelectorAll('.report-filter__header_arrow')];
+    let dropdowns = [...document.querySelectorAll('.report-filter__dropdown')];
+    let headersFilters = [...document.querySelectorAll('.report-filter__header')];
+
+    document.body.addEventListener('click', ()=>{
+        if($(event.target).hasClass('report-filter__header')){
+            $(event.target).children().last().toggleClass('arrow-show');
+            $(event.target).next().toggleClass('show-dropdown');
+            headersFilters.map((el)=> {
+                if($(el).children().last().hasClass('arrow-show') && el !== event.target) {
+                    $(el).children().last().toggleClass('arrow-show');
+                    $(el).next().toggleClass('show-dropdown');
+                }
+            });
+        }
+    });
+
+    // function yearChecking() {
+    //     if(arrows[0].classList.contains('arrow-show') &&
+    //         dropdowns[0].classList.contains('show-dropdown')) {
+    //         let checkboxList = [...$('.checkbox__year')];
+    //         checkboxList.map((el) => {
+    //             if (el.checked) {
+    //                 $('.report-label__year').append(`<span class="report-label">${el.previousElementSibling.textContent}</span>`);
+    //             }
+    //         });
+    //         arrows[0].classList.remove('arrow-show');
+    //         dropdowns[0].classList.remove('show-dropdown');
+    //     } else {
+    //         $('.report-label__year').children().remove();
+    //         arrows[0].classList.add('arrow-show');
+    //         dropdowns[0].classList.add('show-dropdown');
+    //     }
+    // }
+    //
+    // function stageChecking() {
+    //     if(arrows[1].classList.contains('arrow-show') &&
+    //         dropdowns[1].classList.contains('show-dropdown')) {
+    //         let checkboxList = [...$('.checkbox__period')];
+    //         checkboxList.map((el) => {
+    //             if (el.checked) {
+    //                 $('.report-label__period').append(`<span class="report-label">${el.previousElementSibling.textContent}</span>`);
+    //             }
+    //         });
+    //         arrows[1].classList.remove('arrow-show');
+    //         dropdowns[1].classList.remove('show-dropdown');
+    //     } else {
+    //         $('.report-label__period').children().remove();
+    //         arrows[1].classList.add('arrow-show');
+    //         dropdowns[1].classList.add('show-dropdown');
+    //     }
+    // }
+    //
+    // function statusChecking() {
+    //     if(arrows[2].classList.contains('arrow-show') &&
+    //         dropdowns[2].classList.contains('show-dropdown')) {
+    //         let checkboxList = [...$('.checkbox__status')];
+    //         checkboxList.map((el) => {
+    //             if (el.checked) {
+    //                 $('.report-label__status').append(`<span class="report-label">${el.previousElementSibling.textContent}</span>`);
+    //             }
+    //         });
+    //         arrows[2].classList.remove('arrow-show');
+    //         dropdowns[2].classList.remove('show-dropdown');
+    //     } else {
+    //         $('.report-label__status').children().remove();
+    //         arrows[2].classList.add('arrow-show');
+    //         dropdowns[2].classList.add('show-dropdown');
+    //     }
+    // }
+
+    document.body.addEventListener('click', () => {
+        if ($(event.target).hasClass('report-label')) {
+            let currentUncheck = event.target.textContent;
+            let x = [...$('.uncheck')];
+            x.map((el) => {
+                if (el.previousElementSibling.textContent === currentUncheck) {
+                    let index = [...$('.uncheck')].indexOf(el);
+                    $('.uncheck')[index].checked = false;
+                }
+            });
+            $(event.target).remove();
+        }
+    });
+
+//select all checkbox
+    $('.select-all').click(()=> {
+       [...$('.checkbox-table')].map((element)=> {
+           element.checked = true;
+       });
+    });
+
+//open popup
+    let formOpen = [...document.querySelectorAll('.form-button')];
+    document.body.addEventListener('click', () => {
+        if (event.target === formOpen[0]) {
+            $('.popup-group').toggle('.popup-show_group');
+        }
+        if (event.target === formOpen[1]) {
+           $('.popup-user').toggle('popup-show_user');
+        }
+    });
+
+//cancel button
+    $('.button-cancel_group').click(()=> {
+        $('.popup-group').toggle('.popup-show_group');
+    });
+    $('.button-cancel_user').click(()=> {
+        $('.popup-user').toggle('.popup-show_user');
+    });
+
+//apply button
+    $('.button-apply1').click(()=> {
+        $('.popup-group').toggle('.popup-show_group');
+
+        let checkedPop = [];
+        let popUpCheck = [...$('.input-group')];
+        popUpCheck.map((el)=> {
+            if (el.checked) {
+                checkedPop.push(el.parentElement.nextElementSibling.textContent);
+            }
+        });
+
+        if($(event.target).hasClass('button-apply1'))  {
+            $('.input-filter__input_group').val(checkedPop.join('; '));
+        }
+    });
+
+    $('.button-apply2').click(()=> {
+        $('.popup-user').toggle('popup-show_user');
+
+        let checkedPop = [];
+        let popUpCheck = [...$('.input-user')];
+        popUpCheck.map((el)=> {
+            if (el.checked) {
+                checkedPop.push(el.parentElement.nextElementSibling.textContent);
+            }
+        });
+
+        if($(event.target).hasClass('button-apply2')) {
+            $('.input-filter__input_user').val(checkedPop.join('; '));
+        }
+    });
+
+</script>
+</html>

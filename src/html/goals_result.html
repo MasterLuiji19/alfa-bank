@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Goals result</title>
+</head>
+<body>
+<section class="goals">
+    <div id="menu"></div>
+    <div class="goals__content">
+        <div class="header">
+            <div class="header__title-wrapper">
+                <img src="../img/project-management.svg" alt="" class="header__img">
+                <h1 class="header__title">Поточні цілі</h1>
+                <div class="info-block">
+                    <span class="info-button">i</span>
+                    <div class="tooltip">
+                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                        dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                        perspiciatis praesentium provident quos repellendus vel. Natus!
+                    </div>
+                </div>
+            </div>
+            <h3 class="header__user-name">Алешина Катерина Івановна</h3>
+            <span class="header__step">Поточний етап оцінки</span>
+            <div class="header__buttons">
+                <span class="header__name">Результативна оцінка:</span>
+                <div class="print-wrapper">
+                    <div class="evaluation-static" onclick="showPopup()">
+                        <p class="evaluation-static__points">
+                            <span class="evaluation-static__one"></span>
+                            <span class="evaluation-static__two"></span>
+                            <span class="evaluation-static__three"></span>
+                        </p>
+                    </div>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                            dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                            perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                    <button class="print">
+                        <img src="../img/print.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="goal-table">
+            <div class="goal-table__head">
+                <div class="goal-table__head-name-result goal-table__head-item">
+                    <span class="goal-table__span">Назва цілі</span>
+                </div>
+                <div class="goal-table__head-result goal-table__head-item">
+                    <div class="wrap-info">
+                        <span class="goal-table__span">Результат </span>
+                    </div>
+                    <div class="wrap-result">
+                        <div>План</div>
+                        <div>Факт</div>
+                    </div>
+                </div>
+                <div class="goal-table__head-weight-result goal-table__head-item">
+                    <span class="goal-table__span">Вага</span>
+                </div>
+                <div class="goal-table__head-date-result goal-table__head-item">Остаточна дата виконання</div>
+                <div class="goal-table__head-self goal-table__head-item">Самооцінка</div>
+                <div class="goal-table__head-chief goal-table__head-item">Оцінка керівника</div>
+            </div>
+            <div class="table-section">
+                <div class="table-progress">
+                    <div class="goal-table__name-result goal-table__head-name">
+                        Ціль
+                    </div>
+                    <div class="goal-table__plan-result">
+                        Текст
+                    </div>
+                    <div class="goal-table__fact-result">
+                        Текст
+                    </div>
+                    <div class="goal-table__weight-result goal-table__head-weight">
+                        70%
+                    </div>
+                    <div class="goal-table__date-result">
+                        хх.хх.хххх
+                    </div>
+                    <div class="goal-table__self">
+                        <p class="evaluation__points">
+                            <span class="evaluation__one"></span>
+                            <span class="evaluation__two"></span>
+                            <span class="evaluation__three"></span>
+                        </p>
+                        <p class="evaluation__numbers">
+                            <span class="evaluation1">1</span>
+                            <span class="evaluation2">2</span>
+                            <span class="evaluation3">3</span>
+                        </p>
+                    </div>
+                    <div class="goal-table__chief">
+                        <p class="evaluation__points">
+                            <span class="evaluation__one" ></span>
+                            <span class="evaluation__two"></span>
+                            <span class="evaluation__three"></span>
+                        </p>
+                        <p class="evaluation__numbers">
+                            <span class="evaluation1">1</span>
+                            <span class="evaluation2">2</span>
+                            <span class="evaluation3">3</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="description-row description-row--result">
+                    <div class="goal-table__description task-result">Задача 1</div>
+                    <div class="goal-table__date-result"> хх.хх.хххх</div>
+                    <div class="goal-table__self"></div>
+                    <div class="goal-table__chief"></div>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <h3>Коментар до анкети:</h3>
+            <textarea name="comment" id="comment" placeholder="Введіть коментар"></textarea>
+        </div>
+        <div class="submit-wrapper">
+            <button type="submit" class="goal-table__submit">Зберегти</button>
+        </div>
+    </div>
+</section>
+<section class="grading-scale show">
+    <div class="grading-wrapper">
+
+        <div class="grading-scale__title">
+            <span class="grading-scale__name">Шкала оцінювання компетенції</span>
+            <div class="grading-scale__exit" onclick="hidePopup()">+</div>
+        </div>
+        <table class="grading-scale__table">
+            <tr class="grading-scale__head-row">
+                <td> Балл количественное значение уровня</td>
+                <td>Название уровня</td>
+                <td>Содержательное описание уровня</td>
+            </tr>
+            <tr class="grading-scale__firstrow">
+                <td class="grading-scale__firstcol">3</td>
+                <td class="grading-scale__secondtcol">Превосходит ожидание</td>
+                <td class="grading-scale__lastcol">В дополнение к уровню 2: <br> Добиваеться успеха, применяя компетенцию для решения особо сложных задач.
+                </td>
+            </tr>
+            <tr class="grading-scale__secondtrow">
+                <td class="grading-scale__firstcol">2</td>
+                <td class="grading-scale__secondtcol">Соотвествует ожиданием</td>
+                <td class="grading-scale__lastcol">Успешно применяет компетенцию для решения стандарных и новых рабочих задач. Все элементы компетенции
+                    проявляються стабильно и систематически.
+                </td>
+            </tr>
+            <tr  class="grading-scale__thirdrow">
+                <td class="grading-scale__firstcol">1</td>
+                <td class="grading-scale__secondtcol">Требуются улучшения</td>
+                <td class="grading-scale__lastcol">Успешно использует компетенцию для решения стандарных и новых рабочих задач Проявляя компетенцию для
+                    решения новых задач, добиваеться лишь частичного успеха. Элементы компетенции проявляются
+                    нестабильно, от случая к случаю.
+                </td>
+            </tr>
+            <tr  class="grading-scale__lastrow">
+                <td class="grading-scale__firstcol">0</td>
+                <td class="grading-scale__secondtcol">Не соотвествует ожиданиям</td>
+                <td class="grading-scale__lastcol">Не использует компетенцию в своей работе. Проявляет поведение обратное тому, которое описано в
+                    компетенции
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+</body>
+</html>
+<script>
+    $("#menu").load("../../index.html .general-menu");
+
+
+
+   document.body.addEventListener('click', ()=> {
+       let target = $(event.target);
+
+       if (target.hasClass('evaluation__one')){
+           target.addClass('evaluate1').next().removeClass('evaluate2').siblings('.evaluation__three').removeClass('evaluate3')
+               .closest('.evaluation1').addClass('evaluate-number1')
+               .closest('.evaluation2').addClass('evaluate-number2')
+               .closest('.evaluation3').addClass('evaluate-number3');
+       }
+       else if(target.hasClass('evaluation__two'))  {
+           target.addClass('evaluate2').prev().addClass('evaluate1').siblings('.evaluation__three').removeClass('evaluate3')
+               .closest('.evaluation1').removeClass('evaluate-number1')
+               .closest('.evaluation2').addClass('evaluate-number2')
+               .closest('.evaluation3').removeClass('evaluate-number3');
+       }
+       else if (target.hasClass('evaluation__three'))   {
+            target.addClass('evaluate3').prev().addClass('evaluate2').siblings('.evaluation__one').addClass('evaluate1')
+                .closest('.evaluation1').removeClass('evaluate-number1')
+                .closest('.evaluation2').removeClass('evaluate-number2')
+                .closest('.evaluation3').addClass('evaluate-number3');
+       }
+   });
+
+
+    function showPopup() {
+        $('.grading-scale').toggle('show');
+    }
+
+    function hidePopup() {
+        $('.grading-scale').toggle('show');
+    }
+
+    document.body.addEventListener('click', ()=> {
+        if (event.target === document.querySelector('.grading-scale'))    {
+            hidePopup();
+        }
+    });
+</script>

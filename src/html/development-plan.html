@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Development plan</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<section class="goals">
+    <div id="menu"></div>
+    <div class="goals__content">
+        <div class="header">
+            <div class="header__title-wrapper">
+                <img src="../img/develop-plan.svg" alt="" class="header__img">
+                <h1 class="header__title">План розвитку</h1>
+                <div class="info-block">
+                    <span class="info-button">i</span>
+                    <div class="tooltip">
+                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                        dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                        perspiciatis praesentium provident quos repellendus vel. Natus!
+                    </div>
+                </div>
+            </div>
+            <h3 class="header__user-name">Алешина Катерина Івановна</h3>
+            <span class="header__step">Поточний етап оцінки</span>
+
+            <div class="header__buttons">
+                <button class="header__button">Додати ціль</button>
+                <button class="print">
+                    <img src="../img/print.svg" alt="" onclick="showPopupPrint();">
+                </button>
+            </div>
+        </div>
+        <div class="tables-section__wrapper">
+            <div class="tables-section">
+                <div class="tables-section__title">
+                    <input type="text" class="tables-section__name" placeholder="Введіть назву цілі...">
+                    <div class="info-block info-block--plan">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                            dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                            perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <div class="workspace">
+                    <div class="workspace__title development-title">Розвиток на робочому місці (<span
+                            class="workspace__percent">70</span>%):
+                        <div class="info-block development-title__info">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis
+                                dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                                perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <table class="workspace__table development-table">
+                        <tr class="workspace__static development__static">
+                            <td class="workspace__static-buttons">
+                                <button class="workspace__current-goal development-goals">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати з поточних цілей
+                                </button>
+                                <button class="workspace__extra-goal development-goals" onclick="addWorkspace(event)">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати додаткову ціль
+                                </button>
+                            </td>
+                            <td class="workspace__static-comment development__static-comment">Коментар
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                                        aliquam
+                                        corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam
+                                        libero odio omnis perspiciatis praesentium provident quos repellendus vel.
+                                        Natus!
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="workspace__static-remove development__static-remove">Видалити вибраний
+                                інструмент
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="teamwork">
+                    <div class="teamwork__title development-title">Розвиток взаємодії з оточуючими (<span
+                            class="teamwork__percent">20</span>%):
+                        <div class="info-block development-title__info">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis
+                                dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                                perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <table class="teamwork__table development-table">
+                        <tr class="teamwork__static development__static">
+                            <td class="teamwork__static-buttons">
+                                <button class="teamwork__current-goal development-goals">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати з поточних цілей
+                                </button>
+                            </td>
+                            <td class="teamwork__static-comment development__static-comment">Коментар
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                                        aliquam
+                                        corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam
+                                        libero odio omnis perspiciatis praesentium provident quos repellendus vel.
+                                        Natus!
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="teamwork__static-remove development__static-remove">Видалити вибраний
+                                інструмент
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="learning">
+                    <div class="learning__title development-title">Розвиток за допомогою формального навчання (<span
+                            class="learning__percent">10</span>%):
+                        <div class="info-block development-title__info">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis
+                                dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                                perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <table class="learning__table development-table">
+                        <tr class="learning__static development__static">
+                            <td class="learning__static-buttons">
+                                <button class="learning__current-goal development-goals">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати тему тренінгу
+                                </button>
+                            </td>
+                            <td class="learning__static-comment development__static-comment">Коментар
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                                        aliquam
+                                        corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam
+                                        libero odio omnis perspiciatis praesentium provident quos repellendus vel.
+                                        Natus!
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="learning__static-remove development__static-remove">Видалити вибраний
+                                інструмент
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <h3>Коментар до анкети:</h3>
+            <textarea name="comment" id="comment" placeholder="Введіть коментар"></textarea>
+        </div>
+        <div class="submit-wrapper">
+            <button type="submit" class="goal-table__submit">Зберегти</button>
+        </div>
+    </div>
+</section>
+<div class="print-popup__wrapper show">
+    <div class="print-popup">
+        <form action="" class="print-popup__form">
+            <input id="1" type="checkbox" class="all-inputs">
+            <label for="1" class="print-popup__label"><div class="print-popup__cell"></div>Поточнi проекти</label>
+            <input id="2" type="checkbox" class="all-inputs">
+            <label for="2" class="print-popup__label"><div class="print-popup__cell"></div>Компетенції</label>
+            <input id="3" type="checkbox" class="all-inputs">
+            <label for="3" class="print-popup__label"><div class="print-popup__cell"></div>Зворотній зв’язок</label>
+            <input id="4" type="checkbox" class="all-inputs">
+            <label for="4" class="print-popup__label"><div class="print-popup__cell"></div>План розвитку</label>
+            <input id="5" type="checkbox" class="all-inputs">
+            <label for="5" class="print-popup__label"><div class="print-popup__cell"></div>Кар’єрний план</label>
+            <input id="6" type="checkbox">
+            <label for="6" class="print-popup__label"><div class="print-popup__cell"></div>Всі вкладки</label>
+        </form>
+        <div class="print-popup__btn-wrapper">
+            <button class="print-popup__save" onclick="hidePopup()">Зберегти</button>
+            <button class="print-popup__decline" onclick="hidePopup()">Відхилити</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $("#menu").load("../../index.html .general-menu");
+
+    let table = `            <div class="tables-section">
+                <div class="tables-section__title">
+                    <input type="text" class="tables-section__name" placeholder="Введіть назву цілі...">
+                    <div class="info-block info-block--plan">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                            dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                            perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <div class="workspace">
+                    <div class="workspace__title development-title">Розвиток на робочому місці (<span
+                            class="workspace__percent">70</span>%):
+                        <div class="info-block development-title__info">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis
+                                dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                                perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <table class="workspace__table development-table">
+                        <tr class="workspace__static development__static">
+                            <td class="workspace__static-buttons">
+                                <button class="workspace__current-goal development-goals">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати з поточних цілей
+                                </button>
+                                <button class="workspace__extra-goal development-goals" onclick="addWorkspace(event)">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати додаткову ціль
+                                </button>
+                            </td>
+                            <td class="workspace__static-comment development__static-comment">Коментар
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                                        aliquam
+                                        corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam
+                                        libero odio omnis perspiciatis praesentium provident quos repellendus vel.
+                                        Natus!
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="workspace__static-remove development__static-remove">Видалити вибраний
+                                інструмент
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="teamwork">
+                    <div class="teamwork__title development-title">Розвиток взаємодії з оточуючими (<span
+                            class="teamwork__percent">20</span>%):
+                        <div class="info-block development-title__info">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis
+                                dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                                perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <table class="teamwork__table development-table">
+                        <tr class="teamwork__static development__static">
+                            <td class="teamwork__static-buttons">
+                                <button class="teamwork__current-goal development-goals">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати з поточних цілей
+                                </button>
+                            </td>
+                            <td class="teamwork__static-comment development__static-comment">Коментар
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                                        aliquam
+                                        corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam
+                                        libero odio omnis perspiciatis praesentium provident quos repellendus vel.
+                                        Natus!
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="teamwork__static-remove development__static-remove">Видалити вибраний
+                                інструмент
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="learning">
+                    <div class="learning__title development-title">Розвиток за допомогою формального навчання (<span
+                            class="learning__percent">10</span>%):
+                        <div class="info-block development-title__info">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis
+                                dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                                perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <table class="learning__table development-table">
+                        <tr class="learning__static development__static">
+                            <td class="learning__static-buttons">
+                                <button class="learning__current-goal development-goals">
+                                    <img src="../img/plus.svg" alt="">
+                                    Додати тему тренінгу
+                                </button>
+                            </td>
+                            <td class="learning__static-comment development__static-comment">Коментар
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+                                        aliquam
+                                        corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam
+                                        libero odio omnis perspiciatis praesentium provident quos repellendus vel.
+                                        Natus!
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="learning__static-remove development__static-remove">Видалити вибраний
+                                інструмент
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>`;
+
+    let workspace = `
+            <tr class="workspace__dynamic development-dynamic">
+                        <td class="workspace__tool-name development__tool-name"><input type="text" placeholder="Найменування інструменту"></td>
+                        <td class="workspace__comment development__comment"><input type="text" placeholder="Коментар"></td>
+                        <td class="workspace__remove development__remove" ><img src="../img/delete.svg" alt="" onclick="remove(event)"></td>
+                    </tr>
+    `;
+
+    let teamwork = `
+     <tr class="teamwork__dynamic development-dynamic">
+                            <td class="teamwork__tool-name development__tool-name">Наименование инструмента</td>
+                            <td class="teamwork__comment development__comment">Текст</td>
+                            <td class="teamwork__remove development__remove" ><img src="../img/delete.svg" alt="" onclick="remove(event)"></td>
+                        </tr>
+    `;
+    let learning = `
+        <tr class="learning__dynamic development-dynamic">
+                        <td class="learning__tool-name development__tool-name">Найменування інструменту</td>
+                        <td class="learning__comment development__comment"> Текст </td>
+                        <td class="learning__remove development__remove"><img src="../img/delete.svg" alt="" onclick="remove(event)"></td>
+                    </tr>
+    `;
+
+    $(".header__button").click(() => {
+        $(".tables-section__wrapper").append(table);
+    });
+
+    function addWorkspace() {
+        console.log($(event.target).closest('.workspace__table').append(workspace));
+    }
+
+    function remove() {
+        $(event.target).parent().parent().remove();
+    }
+
+    //popup print
+    function showPopupPrint() {
+        $('.print-popup__wrapper').toggle('show');
+    }
+
+    function hidePopupPrint() {
+        $('.print-popup__wrapper').toggle('show');
+    }
+
+    document.body.addEventListener('click', ()=> {
+        if (event.target === document.querySelector('.print-popup__wrapper'))    {
+            hidePopupPrint();
+        }
+    });
+
+    let inputs = [...document.body.querySelectorAll('.all-inputs')];
+
+    $('#6').click(()=> {
+        inputs.map((el)=> {
+            $(el).prop('checked', false);
+        })
+    });
+
+    document.body.addEventListener('click', (target)=> {
+        if (target.target.classList.value === "all-inputs"){
+            $('#6').prop('checked', false);
+        }
+    });
+</script>
+</html>

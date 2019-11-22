@@ -1,0 +1,109 @@
+@import "goals.css";
+@import "goals_result.css";
+@import "table-lock.css";
+@import "development-plan.css";
+@import "save-popup.css";
+@import "print-popup.css";
+@import "profile.css";
+@import "comments-popup.css";
+@import "current-process.css";
+@import "finished-process.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Open Sans', Trebuchet MS, Verdana, Tahoma, sans-serif;
+    color: #212020;
+    font-size: 16px;
+}
+
+.general, .minor {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+}
+
+.general-menu, .minor{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 270px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.general-menu__item, .minor-menu__item {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    text-decoration: none;
+    color: #606060;
+    padding: 0 10px 0 35px;
+}
+
+.general-menu__item svg, .minor-menu__item svg{
+    margin-right: 10px;
+}
+
+.general-menu__item:hover, .minor-menu__item:hover {
+    background-color: #D22630;
+    color: #fff;
+    width: 270px;
+    box-sizing: border-box;
+    border-radius: 0 6px 6px 0;
+}
+
+.general-menu__item_focus {
+    background-color: #D22630;
+    color: #fff;
+    width: 270px;
+    box-sizing: border-box;
+    border-radius: 0 6px 6px 0;
+}
+
+.general-menu__item:hover svg, .minor-menu__item:hover svg {
+    fill: white;
+}
+
+/* info button style */
+.info-block {
+    display: flex;
+    position: relative;
+}
+
+.info-button {
+    color: #AEAEAE;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #AEAEAE;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* hide and position tooltip */
+.tooltip {
+    display: none;
+    top: 16px;
+    left: 0;
+    width: 200px;
+    border-radius: 10px;
+    padding: 13px;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    color: #212020;
+    position: absolute;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 10000;
+}
+
+.info-block:hover .tooltip {
+    display: block;
+    opacity: 1;
+}

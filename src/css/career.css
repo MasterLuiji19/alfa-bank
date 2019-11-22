@@ -1,0 +1,95 @@
+@import "main.css";
+@import "competencies.css";
+
+.career {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    display: flex;
+}
+
+.career-wrap {
+    width: 100%;
+    padding: 36px 60px 0 60px;
+}
+
+.career-header {
+    margin-bottom: 37px;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+}
+
+.career-header__pic {
+    margin-right: 24px;
+}
+
+.career-header__title {
+    font-weight: 500;
+    font-size: 36px;
+    color: #d3d3ed;
+    margin: 0 16px 0 0;
+}
+
+.career-header__name {
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.career-header__status {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 54px;
+}
+
+.career-header__subtitle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.print-pic {
+    cursor: pointer;
+}
+
+.survey-result {
+    margin-bottom: 48px;
+}
+
+.survey-result__name {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 36px;
+}
+
+.survey-result__name_title {
+    margin-right: 36px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.question__name {
+    width: 50%;
+}
+
+.question__answer {
+    width: 50%;
+}
+
+.answer-true {
+    color: #0AA906;
+}
+
+.answer-false {
+    color: #D22630;
+}

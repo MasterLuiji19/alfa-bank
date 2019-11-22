@@ -1,0 +1,152 @@
+.show-list {
+    width: 201px;
+    height: 40px;
+    top: 192px;
+    background: #D22630;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.show-list:hover {
+    background: #BD1A24;
+}
+
+.show-list:active {
+    background: #E43B45;
+}
+
+.info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.info-employee__header {
+    display: flex;
+    align-items: center;
+}
+
+.info-employee__header_name {
+    margin-bottom: 4px;
+}
+
+.info-employee__dropdown {
+    display: none;
+    width: 262px;
+    background-color: #fff;
+    border-radius: 6px 0 6px 6px;
+    padding: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    z-index: 5;
+}
+
+.show-dropdown {
+    display: block;
+}
+
+.arrow {
+    margin-left: 15px;
+    padding: 7px 5px;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.arrow-show {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0 0 0 6px;
+    transform: rotate(180deg);
+    box-shadow: 0 -5px 6px -2px rgba(0, 0, 0, 0.75);
+}
+
+.info-year-arrow, .info-period-arrow {
+    margin-left: 63px;
+}
+
+.filters {
+    display: flex;
+    margin: 55px 0 25px 0;
+    width: 600px;
+}
+
+.info-year__dropdown {
+    margin-left: 48px;
+}
+
+.filters__period, .filters__year {
+    font-weight: 500;
+}
+
+.filters__year {
+    padding-left: 77px;
+}
+
+.wrap-row input:after {
+    content: '';
+    display: block;
+    margin-top: -4px;
+    background: white;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #212020;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.wrap-row input:checked:after {
+    content: '';
+    display: block;
+    margin-top: -4px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #212020;
+    box-sizing: border-box;
+    background: #F9D970;
+    border-radius: 3px;
+}
+
+.filters .wrap-row {
+    display: flex;
+}
+
+.checkbox-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 17px 0;
+}
+
+.label-filter {
+    background: white;
+    width: fit-content;
+    border-radius: 3px;
+    padding: 5px 5px;
+    margin: 5px;
+    font-size: 12px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+span.label-filter:after {
+    content: '+';
+    margin-left: 4px;
+    display: inline-block;
+    transform: rotate(45deg);
+    font-size: 12px;
+}
+
+.labels-filter {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.label-filter__period, .label-filter__year {
+    width: 335px;
+    display: flex;
+    flex-wrap: wrap;
+}

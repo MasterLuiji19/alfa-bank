@@ -1,0 +1,142 @@
+@import "main.css";
+
+.procedure {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    display: flex;
+}
+
+.procedure-wrap {
+    width: 100%;
+    padding: 36px 60px 0 60px;
+}
+
+.procedure-header {
+    margin-bottom: 54px;
+}
+
+.procedure-header__title {
+    font-weight: 500;
+    font-size: 36px;
+    color: #d3d3ed;
+    margin: 0;
+}
+
+/* button */
+.button-wrapper {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.button-back {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    padding: 8px 36px;
+    background: #d22630;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-back:hover {
+    background: #BD1A24;
+}
+
+.button-back:active {
+    background: #E43B45;
+}
+
+/* table */
+.procedure-table {
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: 54px;
+}
+
+.procedure-thead__title td {
+    color: #fff;
+    font-weight: 500;
+    background-color: #4A4949;
+}
+
+.procedure-thead__title td:not(:last-child) {
+    border-right: 1px solid #AEAEAE;
+}
+
+.procedure-thead__title td:first-child {
+    border-radius: 10px 0 0 0;
+    padding: 46px 38px;
+}
+
+.procedure-thead__title td:last-child {
+    border-radius: 0 10px 0 0;
+    padding: 46px 38px;
+}
+
+.procedure-thead__title_label {
+    padding: 16px;
+}
+
+.procedure-table td {
+    text-align: center;
+}
+
+.procedure-thead__label td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    width: 80px;
+    background-color: #ffdd75;
+}
+
+.procedure-thead__label td {
+    border-right: 1px solid #AEAEAE;
+}
+
+.procedure-tbody {
+    background-color: #fff;
+}
+
+.procedure-tbody__item:hover {
+    background-color: #9cdd9b;
+}
+
+.procedure-tbody__item td {
+    border-top: 1px solid #AEAEAE;
+    border-right: 1px solid #AEAEAE;
+    border-bottom: 1px solid #AEAEAE;
+    padding: 16px;
+}
+
+.procedure-tbody__item td:nth-child(1){
+    font-size: 12px;
+    border-left: 1px solid #AEAEAE;
+}
+
+.procedure-tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.procedure-tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+.procedure-tbody__item_value {
+    font-weight: 500;
+}
+
+.procedure-tbody__item_checkbox {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #212020;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.procedure-done {
+    background-color: #fdd653;
+}

@@ -1,0 +1,179 @@
+.tables-section {
+    margin-bottom: 50px;
+}
+
+.development-table {
+    width: 820px;
+    border-spacing: 0;
+}
+
+.tables-section__title {
+    display: flex;
+    height: 70px;
+    width: 820px;
+    background: #4A4949;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.tables-section__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    min-width: 700px;
+    height: 65%;
+    border-radius: 10px;
+    background: transparent;
+    text-align: center;
+}
+
+.tables-section__name:focus {
+    border: 1px solid #757575;
+}
+
+.info-block--plan {
+    padding-left: 10px;
+    margin: 0 0 32px 0;
+}
+
+
+.development-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    padding-left: 35px;
+    height: 70px;
+    align-items: center;
+}
+
+.development-title__info {
+    margin-left: 15px;
+}
+
+.workspace__static .workspace__static-buttons {
+    display: flex;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.teamwork__static .teamwork__static-buttons,
+.learning__static .learning__static-buttons {
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.development-table td {
+    border: 1px solid #aeaeae;
+}
+
+.development__static-comment .info-block {
+    display: inline-flex;
+}
+
+.development__static .development__static-comment {
+    width: 180px;
+    border-style: none solid;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.teamwork__static-buttons, .learning__static-buttons {
+    padding-left: 32px;
+}
+
+.development__static .development__static-remove {
+    width: 170px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.development-table td {
+    height: 70px;
+    background: #f9d970;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.development-goals {
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    display: flex;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.development-goals img {
+    margin-right: 8px;
+}
+
+.development-dynamic td {
+    background: white;
+}
+
+.development-dynamic:last-child .development__remove {
+    border-radius: 0 0 10px 0;
+}
+
+.development-dynamic:last-child .development__tool-name {
+    height: 70px;
+    padding-left: 32px;
+    border-style: none none solid solid;
+    border-radius: 0 0 0 10px;
+}
+
+.development-dynamic .development__comment {
+    border-style: none solid solid solid;
+    text-align: center;
+}
+
+.development-dynamic .development__remove {
+    text-align: center;
+    border-style: none solid solid none;
+}
+
+.workspace__tool-name input, .workspace__comment input {
+    border: none;
+    outline: none;
+    width: calc(100% - 30px);
+    color: #212020;
+    font-size: 16px;
+    padding-left: 30px;
+    background: white;
+}
+
+.development__comment:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+.development__static .comment--result {
+    width: 250px;
+}
+
+.header__buttons--result {
+    justify-content: flex-end;
+}
+
+.evaluation-absolute {
+    position: absolute;
+    right: 68px;
+}

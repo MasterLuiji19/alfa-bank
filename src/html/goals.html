@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goals</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+
+<section class="goals">
+    <div id="menu"></div>
+    <div class="goals__content">
+        <div class="header">
+            <div class="header__title-wrapper">
+                <img src="../img/project-management.svg" alt="" class="header__img">
+                <h1 class="header__title">Поточні цілі</h1>
+                <div class="info-block">
+                    <span class="info-button">i</span>
+                    <div class="tooltip">
+                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                        dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                        perspiciatis praesentium provident quos repellendus vel. Natus!
+                    </div>
+                </div>
+            </div>
+            <h3 class="header__user-name">Алешина Катерина Івановна</h3>
+            <span class="header__step">Поточний етап оцінки</span>
+
+            <div class="header__buttons">
+                <button class="header__button">Додати ціль</button>
+                <button class="print">
+                    <img src="../img/print.svg" alt="" onclick="showPopupPrint();">
+                </button>
+            </div>
+        </div>
+        <div id="table-lock"></div>
+        <div class="goal-table">
+            <div class="goal-table__head">
+                <div class="goal-table__head-name goal-table__head-item">
+                    <span class="goal-table__span">Назва цілі</span>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                            dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                            perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <div class="goal-table__head-result goal-table__head-item">
+                    <div class="wrap-info">
+                        <span class="goal-table__span">Результат </span>
+                        <div class="info-block">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam
+                                corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero
+                                odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-result">
+                        <div>План</div>
+                        <div>Факт</div>
+                    </div>
+                </div>
+                <div class="goal-table__head-weight goal-table__head-item">
+                    <span class="goal-table__span">Вага</span>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis
+                            dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis
+                            perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <div class="goal-table__head-date goal-table__head-item">Остаточна дата виконання</div>
+                <div class="goal-table__head-delete goal-table__head-item"><span>Видалити</span></div>
+            </div>
+        </div>
+        <div class="comment">
+            <h3>Коментар до анкети:</h3>
+            <textarea name="comment" id="comment" placeholder="Введіть коментар"></textarea>
+        </div>
+        <div class="submit-wrapper">
+            <button type="submit" class="goal-table__submit">Зберегти</button>
+        </div>
+    </div>
+</section>
+<div class="print-popup__wrapper show">
+    <div class="print-popup">
+        <form action="" class="print-popup__form">
+            <input id="1" type="checkbox" class="all-inputs">
+            <label for="1" class="print-popup__label"><div class="print-popup__cell"></div>Поточнi проекти</label>
+            <input id="2" type="checkbox" class="all-inputs">
+            <label for="2" class="print-popup__label"><div class="print-popup__cell"></div>Компетенції</label>
+            <input id="3" type="checkbox" class="all-inputs">
+            <label for="3" class="print-popup__label"><div class="print-popup__cell"></div>Зворотній зв’язок</label>
+            <input id="4" type="checkbox" class="all-inputs">
+            <label for="4" class="print-popup__label"><div class="print-popup__cell"></div>План розвитку</label>
+            <input id="5" type="checkbox" class="all-inputs">
+            <label for="5" class="print-popup__label"><div class="print-popup__cell"></div>Кар’єрний план</label>
+            <input id="6" type="checkbox">
+            <label for="6" class="print-popup__label"><div class="print-popup__cell"></div>Всі вкладки</label>
+        </form>
+        <div class="print-popup__btn-wrapper">
+            <button class="print-popup__save" onclick="hidePopup()">Зберегти</button>
+            <button class="print-popup__decline" onclick="hidePopup()">Відхилити</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $("#menu").load("../../index.html .general-menu");
+
+    let x = 1;
+
+    if (x === 2) {
+        document.querySelector('.goal-table').style = ("display: none;");
+        $("#table-lock").load("table-lock.html .goal-table-admin");
+    }
+
+    let textarea = `<div class="textarea-row">
+    <textarea name="new-task" id="new-task" cols="30" placeholder="Введіть опис реалізації проекту"></textarea>
+    <div class="goal-table__date">
+        <input type="date" class="goal-table__calendar">
+    </div>
+    <div class="goal-table__delete-current" onclick="removeTextarea(event)">
+        <img src="../img/delete.svg" alt="">
+    </div>
+</div>`;
+
+    let row = `<div class="description-row">
+    <div class="goal-table__description"></div>
+    <div class="goal-table__date"></div>
+    <div class="goal-table__delete-description" onclick="removeDescription(event)">
+        <img src="../img/delete.svg" alt="">
+    </div>
+</div>`;
+
+    let table = `<div class="table-section">
+    <div class="table-progress">
+        <div class="goal-table__name goal-table__head-name">
+            <input type="text" class="goal-input" placeholder="введіть назву">
+        </div>
+        <div class="goal-table__plan">
+            <input type="text" placeholder="план" class="goal-input">
+        </div>
+        <div class="goal-table__fact">
+            <input type="text" placeholder="факт"  class="goal-input">
+        </div>
+        <div class="goal-table__weight goal-table__head-weight">
+            <input type="text" class="goal-input" placeholder="0%">
+        </div>
+        <div class="goal-table__date">
+            <input type="date" >
+        </div>
+        <div class="goal-table__delete">
+            <img src="../img/delete.svg" alt="">
+        </div>
+    </div>
+
+    <div class="description-wrap"></div>
+    <div class="textarea-wrap">
+        ${textarea}
+    </div>
+
+    <div class="goal-table__add-wrapper">
+        <button class="goal-table__add" onclick="addingTask(event)">Додати задачу</button>
+    </div>
+</div>`;
+
+    document.querySelector('.header__button').addEventListener('click', () => {
+        $('.goal-table').append(table);
+        removeAll(table);
+        removeCurrent(table);
+    });
+
+    function addingTask() {
+        $(event.target).parent().siblings('.textarea-wrap').append(textarea);
+    }
+
+    function removeTextarea() {
+        $(event.target).closest('.textarea-row').remove();
+    }
+
+    function removeAll(el) {
+        let del = [...document.querySelectorAll('.goal-table__delete')];
+
+        del.map((element) => {
+            element.addEventListener('click', () => {
+                element.closest('.table-section').remove();
+            })
+        });
+    }
+
+    function removeCurrent(el) {
+        let areaDelete = [...document.querySelectorAll('.goal-table__delete-current')];
+
+        areaDelete.map((element) => {
+            element.addEventListener('click', () => {
+                element.closest('.textarea-row').remove();
+            })
+        })
+    }
+
+    //popup print
+    function showPopupPrint() {
+        $('.print-popup__wrapper').toggle('show');
+    }
+
+    function hidePopupPrint() {
+        $('.print-popup__wrapper').toggle('show');
+    }
+
+    document.body.addEventListener('click', ()=> {
+        if (event.target === document.querySelector('.print-popup__wrapper'))    {
+            hidePopupPrint();
+        }
+    });
+
+    let inputs = [...document.body.querySelectorAll('.all-inputs')];
+
+    $('#6').click(()=> {
+        inputs.map((el)=> {
+            $(el).prop('checked', false);
+        })
+    });
+
+    document.body.addEventListener('click', (target)=> {
+        if (target.target.classList.value === "all-inputs"){
+            $('#6').prop('checked', false);
+        }
+    });
+</script>
+</html>

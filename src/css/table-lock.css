@@ -1,0 +1,33 @@
+.goal-table__head-name-admin {
+    width: 250px;
+    border: none;
+}
+
+.goal-table__head-result-admin {
+    flex-direction: column;
+    width: 200px;
+}
+
+.goal-table__head-weight-admin {
+    width: 170px;
+}
+
+.goal-table__name-admin {
+    width: 250px;
+}
+
+.goal-table__plan-admin,.goal-table__fact-admin {
+    width: 100px;
+}
+
+.goal-table__weight-admin{
+    width: 169px;
+}
+
+.goal-table__date-admin   {
+    width: 194px;
+}
+
+.goal-table__description-admin  {
+    width: 623px;
+}

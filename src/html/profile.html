@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section class="profile">
+        <div id="general"></div>
+        <div class="wrapper-profile">
+            <div class="profile-header">
+                <div class="header-title">
+                    <img class="header-title__pic" src="../img/project-management.png" alt="">
+                    <h1 class="header-title__name">Управління оціночною формою</h1>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <h2 class="profile-header__name">Альошина Катерина Іванівна</h2>
+                <p class="profile-header__status-rating">Поточний етап оцінки:</p>
+                <div class="profile-info">
+                    <div class="info-wrapper">
+                        <div class="info-employee">
+                            <div class="info-employee__header">
+                                <span class="info-employee__header_name">Інформація про співробітника</span>
+                                <img class="arrow" src="../img/Vector.svg" alt="">
+                            </div>
+                            <div class="info-employee__dropdown">
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Посада:</span>
+                                    <span class="row-item_right position-name">Оператор Call-Center</span>
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Рівень посади:</span>
+                                    <span class="row-item_right level-name"></span>
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Підрозділ:</span>
+                                    <span class="row-item_right subdivision-name">Так буде виглядати якщо в два рядки або більше</span>
+                                </div>
+                                <div class="wrap-row">
+                                    <span class="row-item_left">Дата прийому:</span>
+                                    <span class="row-item_right data-name">25 травня 2014 року</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-value">
+                            <div class="info-value__header">
+                                <span class="info-value__header_name">Інформація про хід оцінки</span>
+                                <img class="arrow-value" src="../img/Vector.svg" alt="">
+                            </div>
+                            <div class="info-value__dropdown">
+                                <div class="info-value__content">
+                                    <span class="info-value__content_name">Статус оціночної форми за період постановки:</span>
+                                    <span class="info-value__content_status not-done">Не затверджено керівником</span>
+                                </div>
+                                <div class="info-value__content">
+                                    <span class="info-value__content_name">Статус оціночної форми за період коригування:</span>
+                                    <span class="info-value__content_status done">Підтверджено</span>
+                                </div>
+                                <div class="info-value__content">
+                                    <span class="info-value__content_name">Зміна оціночної форми:</span>
+                                    <span class="info-value__content_status change">Змінено посаду</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-data admin-profile__data">
+                        <div class="info-data__header">
+                            <span class="info-data__header_title">Зустріч фінального узгодження:</span>
+                        </div>
+                        <div class="info-data__content">
+                            <span class="info-data__content_name">Вкажіть дату проведення зустрічі</span>
+                            <div class="info-data__content_input">
+                                <label class="input-icon" for="data-visit">
+                                    <input class="data-input" id="data-visit"
+                                           type="date" name="dob" data-placeholder="Дата" required aria-required="true">
+                                </label>
+                                <div class="info-block">
+                                    <span class="info-button">i</span>
+                                    <div class="tooltip">
+                                        Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block__title">
+                    <h3 class="profile-block__name">Коментар до підсумкової оцінки:</h3>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <p class="profile-block__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid, blanditiis dolor eius
+                    error est repellendus voluptas? Accusantium commodi eius hic laboriosam nam nobis obcaecati perferendis
+                    rem repudiandae, veritatis. Sapiente. Alias aliquam asperiores assumenda aut cum cupiditate
+                    deserunt doloremque error fugit harum ipsam ipsum maxime, odio omnis possimus quae, reiciendis
+                    repudiandae rerum suscipit veniam. Dicta harum incidunt iste neque nostrum.</p>
+            </div>
+            <div class="profile-block admin-profile__comment">
+                <div class="profile-block__title">
+                    <h3 class="profile-block__name">Коментар до підсумкової оцінки:</h3>
+                    <span class="info-button">i</span>
+                </div>
+                <textarea class="profile-block__comment" placeholder="Введіть коментар"></textarea>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block__title">
+                    <h3 class="profile-block__name">Опитування з кар'єрного розвитку:</h3>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-block__polls">
+                    <span class="polls-name">Назва опитування</span>
+                    <a class="polls-pass" href="#">Пройти опитування</a>
+                </div>
+                <div class="profile-block__polls">
+                    <span class="polls-name">Назва опитування</span>
+                    <a class="polls-pass" href="#">Пройти опитування</a>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block__title">
+                    <h3 class="profile-block__name">Зворотній зв'язок 360:</h3>
+                    <div class="info-block">
+                        <span class="info-button">i</span>
+                        <div class="tooltip">
+                            Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-block__polls">
+                    <span class="polls-name">Зворотній зв'язок за <span>2.02.19</span> - <span>14.04.19</span></span>
+                    <a class="polls-pass" href="#">Пройти опитування</a>
+                </div>
+                <div class="profile-block__polls">
+                    <span class="polls-name">Зворотній зв'язок за <span>14.11.19</span> - <span>1.01.19</span></span>
+                    <a class="polls-pass" href="#">Пройти опитування</a>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block__title">
+                    <h3 class="profile-block__name">Історія коментарів:</h3>
+                </div>
+                <div class="profile-block__history">
+                    <span class="history-name">Іванов Іван Іванович</span>
+                    <span class="history-data">13.03.2019</span>
+                </div>
+                <div class="profile-block__profiles">
+                    <div class="profiles-item">
+                        <div class="profiles-item__header">
+                            <span class="profiles-item__name">Анкета
+                                <span>«Поточні проекти»: Завдання не відповідають проекту 2</span></span>
+                            <img class="arrow-profiles" src="../img/Vector.svg" alt="">
+                        </div>
+                        <div class="profiles-item__comment">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aut, culpa
+                                dicta dolore, dolorem, dolores dolorum earum enim explicabo ipsa nesciunt nulla odio
+                                officiis omnis placeat quia repellendus saepe!</span>
+                        </div>
+                    </div>
+                    <div class="profiles-item">
+                        <div class="profiles-item__header">
+                            <span class="profiles-item__name">Анкета
+                                <span>«Поточні проекти»: Завдання не відповідають проекту 2</span></span>
+                            <img class="arrow-profiles" src="../img/Vector.svg" alt="">
+                        </div>
+                        <div class="profiles-item__comment">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aut, culpa
+                                dicta dolore, dolorem, dolores dolorum earum enim explicabo ipsa nesciunt nulla odio
+                                officiis omnis placeat quia repellendus saepe!</span>
+                        </div>
+                    </div>
+                    <div class="profiles-item">
+                        <div class="profiles-item__header">
+                            <span class="profiles-item__name">Анкета
+                                <span>«Поточні проекти»: Завдання не відповідають проекту 2</span></span>
+                            <img class="arrow-profiles" src="../img/Vector.svg" alt="">
+                        </div>
+                        <div class="profiles-item__comment">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aut, culpa
+                                dicta dolore, dolorem, dolores dolorum earum enim explicabo ipsa nesciunt nulla odio
+                                officiis omnis placeat quia repellendus saepe!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-block">
+                <div class="profile-block__title">
+                    <h3 class="profile-block__name">Управління анкетами оціночної форми:</h3>
+                </div>
+                <div class="profile-block__button-wrapper user-button">
+                    <button class="button-submit">Надіслати на узгодження</button>
+                </div>
+                <div class="profile-block__button-wrapper admin-buttons">
+                    <button class="button-submit first-submit">Повернути на доопрацювання</button>
+                    <button class="button-submit">Затвердити</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        $( "#general" ).load( "../../index.html .general-menu" );
+
+        document.querySelector('.info-employee__header').addEventListener('click', ()=> {
+            document.querySelector('.info-employee__dropdown').classList.toggle('show-dropdown');
+            document.querySelector('.arrow').classList.toggle('arrow-show');
+        });
+
+        document.querySelector('.info-value__header').addEventListener('click', ()=> {
+            document.querySelector('.info-value__dropdown').classList.toggle('show-value_dropdown');
+            document.querySelector('.arrow-value').classList.toggle('arrow-value_show');
+        });
+
+        let comment = [...document.querySelectorAll('.profiles-item__header')];
+        comment.map((element) => {
+            element.addEventListener('click', ()=> {
+                element.nextElementSibling.classList.toggle('show-item__comment');
+                element.lastElementChild.classList.toggle('arrow-profiles__show');
+            })
+        });
+    </script>
+
+</body>
+</html>

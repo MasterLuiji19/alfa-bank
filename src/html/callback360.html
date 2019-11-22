@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback360</title>
+    <link rel="stylesheet" href="../css/callback360.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section class="callback">
+        <div id="general"></div>
+        <div class="callback-wrap">
+            <div class="callback-header">
+                <div class="header-row">
+                    <img class="callback-header__pic" src="../img/project-management.svg" alt="">
+                    <h1 class="callback-header__title">Зворотній зв'язок 360</h1>
+                    <div class="info-block"></div>
+                </div>
+                <h2 class="callback-header__name">Альошина Катерина Іванівна</h2>
+                <span class="callback-header__status">Поточний етап оцінки:</span>
+                <div class="callback-header__subtitle">
+                    <span class="subtitle-name">Формування зворотнього зв'язку за
+                        <span>15.04.19</span> - <span>24.09.19</span></span>
+                    <img class="print-pic" src="../img/printer.svg" alt="" onclick="showPopupPrint();">
+                </div>
+                <div class="callback-header__buttons">
+                    <div class="button-select">
+                        <button type="submit" class="callback-button">Обрати співробітників</button>
+                    </div>
+                    <div class="info-block"></div>
+                    <div class="button-approve">
+                        <button type="submit" class="callback-button" onclick="deleteButtons(event)">Затвердити список</button>
+                    </div>
+                    <div class="button-start">
+                        <button type="submit" class="callback-button">Старт опитування</button>
+                    </div>
+                </div>
+            </div>
+            <div class="callback-content">
+                <table class="callback-content__table">
+                    <thead class="table-header">
+                        <tr>
+                            <td>ПІБ</td>
+                            <td>Посада</td>
+                            <td>Підрозділ</td>
+                            <td class="table-header__remove">Видалити</td>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+<!--                        <tr class="tbody-value">-->
+<!--                            <td>Клименко В'ячеслав Іванович</td>-->
+<!--                            <td>ОС функціональний кер..</td>-->
+<!--                            <td>Відділ розробки</td>-->
+<!--                            <td><img class="basket" src="../../img/delete.svg" alt="delete" onclick="deleteRow(event);"></td>-->
+<!--                        </tr>-->
+                    </tbody>
+                </table>
+                <div class="callback-content__results">
+                    <div class="results-title">
+                        <span>Результати зворотного зв'язку</span>
+                    </div>
+                    <div class="results-item">
+                        <div class="results-item__wrap">
+                            <span class="results-item__data">Зворотній зв'язок за
+                            <span class="data-start">2.02.19</span> - <span class="data-end">14.04.19</span></span>
+                            <span class="results-item__checkout">Переглянути результат</span>
+                        </div>
+                        <div class="results-item__assessment">
+                            <span class="assessment-name">Середня оцінка по відповідям:</span>
+                            <span class="assessment-value evaluate-number2">3</span>
+                        </div>
+                    </div>
+                    <div class="results-item">
+                        <div class="results-item__wrap">
+                            <span class="results-item__data">Зворотній зв'язок за
+                            <span class="data-start">2.02.19</span> - <span class="data-end">14.04.19</span></span>
+                            <span class="results-item__checkout">Переглянути результат</span>
+                        </div>
+                        <div class="results-item__assessment">
+                            <span class="assessment-name">Середня оцінка по відповідям:</span>
+                            <span class="assessment-value evaluate-number3">4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <h3>Коментар до анкети:</h3>
+                <textarea name="comment" id="comment" placeholder="Введіть коментар"></textarea>
+            </div>
+            <div class="submit-wrapper">
+                <button type="submit" class="goal-table__submit">Зберегти</button>
+            </div>
+        </div>
+    </section>
+    <div class="print-popup__wrapper show">
+        <div class="print-popup">
+            <form action="" class="print-popup__form">
+                <input id="1" type="checkbox" class="all-inputs">
+                <label for="1" class="print-popup__label"><div class="print-popup__cell"></div>Поточнi проекти</label>
+                <input id="2" type="checkbox" class="all-inputs">
+                <label for="2" class="print-popup__label"><div class="print-popup__cell"></div>Компетенції</label>
+                <input id="3" type="checkbox" class="all-inputs">
+                <label for="3" class="print-popup__label"><div class="print-popup__cell"></div>Зворотній зв’язок</label>
+                <input id="4" type="checkbox" class="all-inputs">
+                <label for="4" class="print-popup__label"><div class="print-popup__cell"></div>План розвитку</label>
+                <input id="5" type="checkbox" class="all-inputs">
+                <label for="5" class="print-popup__label"><div class="print-popup__cell"></div>Кар’єрний план</label>
+                <input id="6" type="checkbox">
+                <label for="6" class="print-popup__label"><div class="print-popup__cell"></div>Всі вкладки</label>
+            </form>
+            <div class="print-popup__btn-wrapper">
+                <button class="print-popup__save" onclick="hidePopup()">Зберегти</button>
+                <button class="print-popup__decline" onclick="hidePopup()">Відхилити</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $( "#general" ).load( "../../index.html .general-menu" );
+        $( ".info-block" ).load( "../../index.html .info-block" );
+
+        let nameRow = `<tr class="tbody-value">
+                            <td>Яковенко Іван Петрович</td>
+                            <td>Менеджер</td>
+                            <td>Відділ продажу</td>
+                            <td  class="tbody-value__remove"><img class="basket" src="../img/delete.svg" alt="delete" onclick="deleteRow(event);"></td>
+                        </tr>`;
+
+        $('.button-select').click(()=> {
+            $('.table-body').append(nameRow);
+        });
+
+        function deleteButtons() {
+            $(event.target).closest('.callback-header__buttons').remove();
+            $('.table-header__remove, .tbody-value__remove').remove();
+        }
+
+        function deleteRow() {
+            $(event.target).closest('.tbody-value').remove();
+        }
+
+        //popup print
+        function showPopupPrint() {
+            $('.print-popup__wrapper').toggle('show');
+        }
+
+        function hidePopupPrint() {
+            $('.print-popup__wrapper').toggle('show');
+        }
+
+        document.body.addEventListener('click', ()=> {
+            if (event.target === document.querySelector('.print-popup__wrapper'))    {
+                hidePopupPrint();
+            }
+        });
+
+        let inputs = [...document.body.querySelectorAll('.all-inputs')];
+
+        $('#6').click(()=> {
+            inputs.map((el)=> {
+                $(el).prop('checked', false);
+            })
+        });
+
+        document.body.addEventListener('click', (target)=> {
+            if (target.target.classList.value === "all-inputs"){
+                $('#6').prop('checked', false);
+            }
+        });
+    </script>
+</body>
+</html>

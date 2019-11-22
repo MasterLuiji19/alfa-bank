@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>print-popup</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<div class="print-popup__wrapper show">
+    <div class="print-popup">
+        <form action="" class="print-popup__form">
+            <input id="1" type="checkbox" class="all-inputs"><label for="1" class="print-popup__label"><div class="print-popup__cell"></div>Поточнi проекти</label>
+            <input id="2" type="checkbox" class="all-inputs"><label for="2" class="print-popup__label"><div class="print-popup__cell"></div>Компетенції</label>
+            <input id="3" type="checkbox" class="all-inputs"><label for="3" class="print-popup__label"><div class="print-popup__cell"></div>Зворотній зв’язок</label>
+            <input id="4" type="checkbox" class="all-inputs"><label for="4" class="print-popup__label"><div class="print-popup__cell"></div>План розвитку</label>
+            <input id="5" type="checkbox" class="all-inputs"><label for="5" class="print-popup__label"><div class="print-popup__cell"></div>Кар’єрний план</label>
+            <input id="6" type="checkbox"><label for="6" class="print-popup__label"><div class="print-popup__cell"></div>Всі вкладки</label>
+        </form>
+        <div class="print-popup__btn-wrapper">
+            <button class="print-popup__save" onclick="hidePopup()">Зберегти</button>
+            <button class="print-popup__decline" onclick="hidePopup()">Відхилити</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    showPopup();
+
+    function showPopup() {
+        $('.print-popup__wrapper').toggle('show');
+    }
+
+    function hidePopup() {
+        $('.print-popup__wrapper').toggle('show');
+    }
+
+    document.body.addEventListener('click', ()=> {
+        if (event.target === document.querySelector('.print-popup__wrapper'))    {
+            hidePopup();
+        }
+    });
+
+    let inputs = [...document.body.querySelectorAll('.all-inputs')];
+
+    $('#6').click(()=> {
+        inputs.map((el)=> {
+            $(el).prop('checked', false);
+        })
+
+    });
+
+    document.body.addEventListener('click', (target)=> {
+        if (target.target.classList.value === "all-inputs"){
+            $('#6').prop('checked', false);
+        }
+    });
+</script>

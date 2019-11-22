@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+    <link rel="stylesheet" href="../css/comments-popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="comment-popup__wrapper show">
+    <div class="comment-popup">
+
+        <div class="project comment-wrap">
+            <span class="comment-popup__close" onclick="hidePopup()">+</span>
+            <span class="project__title comment-title">Коментар до анкети “Поточні проекти”</span>
+            <textarea name="" id="project" class="project__textarea comment-textarea"></textarea>
+        </div>
+
+        <div class="competence comment-wrap">
+            <span class="project__title comment-title">Коментар до анкети “Компетенції”</span>
+            <textarea name="" id="competence" class="project__textarea comment-textarea"></textarea>
+        </div>
+        <div class="plan comment-wrap">
+            <span class="project__title comment-title">Коментар до анкети “План розвитку”</span>
+            <textarea name="" id="plan" class="project__textarea comment-textarea"></textarea>
+        </div>
+
+        <div class="comment-popup__btn-wrapper">
+            <button class="comment-popup__save" onclick="hidePopup()">Зберегти</button>
+            <button class="comment-popup__decline" onclick="hidePopup()">Відхилити</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    showPopup();
+
+    function showPopup() {
+        $('.comment-popup__wrapper').toggle('show');
+    }
+
+    function hidePopup() {
+        $('.comment-popup__wrapper').toggle('show');
+    }
+
+    document.body.addEventListener('click', () => {
+        if (event.target === document.querySelector('.comment-popup__wrapper')) {
+            hidePopup();
+        }
+    })
+</script>

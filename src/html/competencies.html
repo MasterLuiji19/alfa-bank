@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Competencies</title>
+    <link rel="stylesheet" href="../css/competencies.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <section class="competencies">
+        <div id="general"></div>
+        <div class="competencies-wrap">
+            <div class="competencies__header">
+                <div class="header-row">
+                    <img class="header-row__logo" src="../img/competencies.png" alt="">
+                    <h1 class="header-row__title">Компетенції</h1>
+                    <div class="info-block"></div>
+                </div>
+                <h2 class="competencies__header_name">Альошина Катерина Іванівна</h2>
+                <span class="competencies__header_status">Поточний етап оцінки:</span>
+                <div class="subtitle">
+                    <span class="subtitle__name">Результативна оцінка:</span>
+                    <div class="subtitle-right">
+                        <div class="progress-button" onclick="showPopup();">
+                            <div class="progress-button__item_one"></div>
+                            <div class="progress-button__item_two"></div>
+                            <div class="progress-button__item_three"></div>
+                        </div>
+                        <div class="info-block"></div>
+                        <img class="print-pic" src="../img/printer.svg" alt="print" onclick="showPopupPrint();">
+                    </div>
+                </div>
+                <div class="print-logo" style="display: none;">
+                    <img class="print-pic" src="../img/printer.svg" alt="print" onclick="showPopupPrint();">
+                </div>
+            </div>
+            <div class="competencies__content">
+                <div class="competence">
+                    <div class="competence__header">
+                        <img class="competence__header_pic" src="../img/arrow-white.svg" alt="">
+                        <span class="competence__header_title">Стратегічність</span>
+                        <div class="info-block" style="display: none;">
+                                <span class="info-button">i</span>
+                                <div class="tooltip">
+                                    Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                                </div>
+                        </div>
+                        <div class="assessment-number">
+                            <span class="evaluate-number5">4</span>
+                        </div>
+                    </div>
+                    <div class="competence__content">
+                            <div class="item-name">
+                                <div class="item-name__title item-border_right">
+                                        <span>Стратегічне мислення</span>
+                                    </div>
+                                <div class="item-name__title">
+                                        <span>Розуміння ринку</span>
+                                    </div>
+                            </div>
+                            <div class="item-points">
+                                    <div class="item-points__content points-border">
+                                        <div class="item-points__wrap">
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Вміє визначити стратегію, узагальнючи шнформацію з різних джерел та думки різних
+                                    зацікавлених сторін</span>
+                                            </div>
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Пропонує нові ідеї, підходиб концепції розвитку біснесу</span>
+                                            </div>
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Володіє ціліснісним розумінням діялбності банку (helicopter view)</span>
+                                            </div>
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Вміє правильно оцінювати наслідки прийнятих рішень у всіх сферах діялбності банку</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-points__content">
+                                        <div class="item-points__wrap">
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Розуміє тенденції ринку</span>
+                                            </div>
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Відстежує діяльність конкурентів</span>
+                                            </div>
+                                            <div class="item-points__name">
+                                                <img src="../img/checkout.svg" alt="">
+                                                <span>Індефікує нові привабливі напрямки та можливості розвитку бізнесу для банку</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="item-assessment">
+                                <div class="item-assessment__header">
+                                    <div class="assessment-header item-border_right">
+                                        <div class="assessment-header__name item-border_right">Самооцінка</div>
+                                        <div class="assessment-header__name">Оцінка керівника</div>
+                                    </div>
+                                    <div class="assessment-header">
+                                        <div class="assessment-header__name item-border_right">Самооцінка</div>
+                                        <div class="assessment-header__name">Оцінка керівника</div>
+                                    </div>
+                                </div>
+                                <div class="item-assessment__content">
+                                    <div class="assessment-wrap points-border">
+                                        <div class="assessment-content points-border">
+                                            <div class="progress-bar__wrap">
+                                                <div class="assessment-content__progress-bar">
+                                                    <div class="progress-bar__one" onclick="evaluateOne(event)"></div>
+                                                    <div class="progress-bar__two" onclick="evaluateTwo(event)"></div>
+                                                    <div class="progress-bar__three" onclick="evaluateThree(event)"></div>
+                                                    <div class="progress-bar__four" onclick="evaluateFour(event)"></div>
+                                                    <div class="progress-bar__five" onclick="evaluateFive(event)"></div>
+                                                </div>
+                                                <div class="assessment-content__numbers">
+                                                    <span class="number-one">0</span>
+                                                    <span class="number-two">1</span>
+                                                    <span class="number-three">2</span>
+                                                    <span class="number-four">3</span>
+                                                    <span class="number-five">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="assessment-content">
+                                            <div class="progress-bar__wrap">
+                                                <div class="assessment-content__progress-bar">
+                                                    <div class="progress-bar__one" onclick="evaluateOne(event)"></div>
+                                                    <div class="progress-bar__two" onclick="evaluateTwo(event)"></div>
+                                                    <div class="progress-bar__three" onclick="evaluateThree(event)"></div>
+                                                    <div class="progress-bar__four" onclick="evaluateFour(event)"></div>
+                                                    <div class="progress-bar__five" onclick="evaluateFive(event)"></div>
+                                                </div>
+                                                <div class="assessment-content__numbers">
+                                                    <span class="number-one">0</span>
+                                                    <span class="number-two">1</span>
+                                                    <span class="number-three">2</span>
+                                                    <span class="number-four">3</span>
+                                                    <span class="number-five">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="assessment-wrap">
+                                        <div class="assessment-content points-border">
+                                            <div class="progress-bar__wrap">
+                                                <div class="assessment-content__progress-bar">
+                                                    <div class="progress-bar__one" onclick="evaluateOne(event)"></div>
+                                                    <div class="progress-bar__two" onclick="evaluateTwo(event)"></div>
+                                                    <div class="progress-bar__three" onclick="evaluateThree(event)"></div>
+                                                    <div class="progress-bar__four" onclick="evaluateFour(event)"></div>
+                                                    <div class="progress-bar__five" onclick="evaluateFive(event)"></div>
+                                                </div>
+                                                <div class="assessment-content__numbers">
+                                                    <span class="number-one">0</span>
+                                                    <span class="number-two">1</span>
+                                                    <span class="number-three">2</span>
+                                                    <span class="number-four">3</span>
+                                                    <span class="number-five">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="assessment-content">
+                                            <div class="progress-bar__wrap">
+                                                <div class="assessment-content__progress-bar">
+                                                    <div class="progress-bar__one" onclick="evaluateOne(event)"></div>
+                                                    <div class="progress-bar__two" onclick="evaluateTwo(event)"></div>
+                                                    <div class="progress-bar__three" onclick="evaluateThree(event)"></div>
+                                                    <div class="progress-bar__four" onclick="evaluateFour(event)"></div>
+                                                    <div class="progress-bar__five" onclick="evaluateFive(event)"></div>
+                                                </div>
+                                                <div class="assessment-content__numbers">
+                                                    <span class="number-one">0</span>
+                                                    <span class="number-two">1</span>
+                                                    <span class="number-three">2</span>
+                                                    <span class="number-four">3</span>
+                                                    <span class="number-five">4</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="competence">
+                    <div class="competence__header">
+                        <img class="competence__header_pic" src="../img/arrow-white.svg" alt="">
+                        <span class="competence__header_title">Стратегічність</span>
+                        <div class="info-block">
+                            <span class="info-button">i</span>
+                            <div class="tooltip">
+                                Початок тексту Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam corporis dicta dolores earum eveniet, fugit inventore, itaque iusto laboriosam libero odio omnis perspiciatis praesentium provident quos repellendus vel. Natus!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="competence__content">
+                        <div class="competence__item">
+                            <div class="item-name">
+                                <div class="item-name__title item-border_right">
+                                    <span>Стратегічне мислення</span>
+                                </div>
+                                <div class="item-name__title">
+                                    <span>Розуміння ринку</span>
+                                </div>
+                            </div>
+                            <div class="item-points">
+                                <div class="item-points__left">
+                                    <div class="item-points__wrap">
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Вміє визначити стратегію, узагальнючи шнформацію з різних джерел та думки різних
+                                    зацікавлених сторін</span>
+                                        </div>
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Пропонує нові ідеї, підходиб концепції розвитку біснесу</span>
+                                        </div>
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Володіє ціліснісним розумінням діялбності банку (helicopter view)</span>
+                                        </div>
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Вміє правильно оцінювати наслідки прийнятих рішень у всіх сферах діялбності банку</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-points__right">
+                                    <div class="item-points__wrap">
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Розуміє тенденції ринку</span>
+                                        </div>
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Відстежує діяльність конкурентів</span>
+                                        </div>
+                                        <div class="item-points__name">
+                                            <img src="../img/checkout.svg" alt="">
+                                            <span>Індефікує нові привабливі напрямки та можливості розвитку бізнесу для банку</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <h3>Коментар до анкети:</h3>
+                <textarea name="comment" id="comment" placeholder="Введіть коментар"></textarea>
+            </div>
+            <div class="submit-wrapper">
+                <button type="submit" class="goal-table__submit">Зберегти</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="grading-scale show">
+        <div class="grading-wrapper">
+            <div class="grading-scale__title">
+                <span class="grading-scale__name">Шкала оцінювання компетенції</span>
+                <div class="grading-scale__exit" onclick="hidePopup()">+</div>
+            </div>
+            <table class="grading-scale__table">
+                <tr class="grading-scale__head-row">
+                    <td> Балл количественное значение уровня</td>
+                    <td>Название уровня</td>
+                    <td>Содержательное описание уровня</td>
+                </tr>
+                <tr class="grading-scale__firstrow">
+                    <td class="grading-scale__firstcol">3</td>
+                    <td class="grading-scale__secondtcol">Превосходит ожидание</td>
+                    <td class="grading-scale__lastcol">В дополнение к уровню 2: <br> Добиваеться успеха, применяя компетенцию для решения особо сложных задач.
+                    </td>
+                </tr>
+                <tr class="grading-scale__secondtrow">
+                    <td class="grading-scale__firstcol">2</td>
+                    <td class="grading-scale__secondtcol">Соотвествует ожиданием</td>
+                    <td class="grading-scale__lastcol">Успешно применяет компетенцию для решения стандарных и новых рабочих задач. Все элементы компетенции
+                        проявляються стабильно и систематически.
+                    </td>
+                </tr>
+                <tr  class="grading-scale__thirdrow">
+                    <td class="grading-scale__firstcol">1</td>
+                    <td class="grading-scale__secondtcol">Требуются улучшения</td>
+                    <td class="grading-scale__lastcol">Успешно использует компетенцию для решения стандарных и новых рабочих задач Проявляя компетенцию для
+                        решения новых задач, добиваеться лишь частичного успеха. Элементы компетенции проявляются
+                        нестабильно, от случая к случаю.
+                    </td>
+
+                </tr>
+                <tr  class="grading-scale__lastrow">
+                    <td class="grading-scale__firstcol">0</td>
+                    <td class="grading-scale__secondtcol">Не соотвествует ожиданиям</td>
+                    <td class="grading-scale__lastcol">Не использует компетенцию в своей работе. Проявляет поведение обратное тому, которое описано в
+                        компетенции
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <div class="print-popup__wrapper show">
+        <div class="print-popup">
+            <form action="" class="print-popup__form">
+                <input id="1" type="checkbox" class="all-inputs">
+                <label for="1" class="print-popup__label"><div class="print-popup__cell"></div>Поточнi проекти</label>
+                <input id="2" type="checkbox" class="all-inputs">
+                <label for="2" class="print-popup__label"><div class="print-popup__cell"></div>Компетенції</label>
+                <input id="3" type="checkbox" class="all-inputs">
+                <label for="3" class="print-popup__label"><div class="print-popup__cell"></div>Зворотній зв’язок</label>
+                <input id="4" type="checkbox" class="all-inputs">
+                <label for="4" class="print-popup__label"><div class="print-popup__cell"></div>План розвитку</label>
+                <input id="5" type="checkbox" class="all-inputs">
+                <label for="5" class="print-popup__label"><div class="print-popup__cell"></div>Кар’єрний план</label>
+                <input id="6" type="checkbox">
+                <label for="6" class="print-popup__label"><div class="print-popup__cell"></div>Всі вкладки</label>
+            </form>
+            <div class="print-popup__btn-wrapper">
+                <button class="print-popup__save" onclick="hidePopupPrint()">Зберегти</button>
+                <button class="print-popup__decline" onclick="hidePopupPrint()">Відхилити</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        $( "#general" ).load( "../../index.html .general-menu" );
+        $( ".info-block" ).load( "../../index.html .info-block" );
+
+        let competence = [...document.querySelectorAll('.competence__header')];
+        competence.map((element) => {
+            element.addEventListener('click', ()=> {
+               element.nextElementSibling.classList.toggle('content_show');
+               element.firstElementChild.classList.toggle('pic_show');
+               element.classList.toggle('border-radius');
+            });
+        });
+
+        function evaluateOne() {
+            $(event.target).addClass('evaluate1');
+            $(event.target).next().removeClass('evaluate2');
+            $(event.target).next().next().removeClass('evaluate3');
+            $(event.target).next().next().next().removeClass('evaluate4');
+            $(event.target).next().next().next().next().removeClass('evaluate5');
+            $(event.target).parent().next().children('.number-one').addClass('evaluate-number1');
+            $(event.target).parent().next().children('.number-two').removeClass('evaluate-number2');
+            $(event.target).parent().next().children('.number-three').removeClass('evaluate-number3');
+            $(event.target).parent().next().children('.number-four').removeClass('evaluate-number4');
+            $(event.target).parent().next().children('.number-five').removeClass('evaluate-number5');
+        }
+
+        function evaluateTwo() {
+            $(event.target).addClass('evaluate2');
+            $(event.target).prev().addClass('evaluate1');
+            $(event.target).next().removeClass('evaluate3');
+            $(event.target).next().next().removeClass('evaluate4');
+            $(event.target).next().next().next().removeClass('evaluate5');
+            $(event.target).parent().next().children('.number-two').addClass('evaluate-number2');
+            $(event.target).parent().next().children('.number-one').removeClass('evaluate-number1');
+            $(event.target).parent().next().children('.number-three').removeClass('evaluate-number3');
+            $(event.target).parent().next().children('.number-four').removeClass('evaluate-number4');
+            $(event.target).parent().next().children('.number-five').removeClass('evaluate-number5');
+        }
+
+        function evaluateThree() {
+            $(event.target).addClass('evaluate3');
+            $(event.target).prev().addClass('evaluate2');
+            $(event.target).prev().prev().addClass('evaluate1');
+            $(event.target).next().removeClass('evaluate4');
+            $(event.target).next().next().removeClass('evaluate5');
+            $(event.target).parent().next().children('.number-three').addClass('evaluate-number3');
+            $(event.target).parent().next().children('.number-two').removeClass('evaluate-number2');
+            $(event.target).parent().next().children('.number-one').removeClass('evaluate-number1');
+            $(event.target).parent().next().children('.number-four').removeClass('evaluate-number4');
+            $(event.target).parent().next().children('.number-five').removeClass('evaluate-number5');
+        }
+
+        function evaluateFour() {
+            $(event.target).addClass('evaluate4');
+            $(event.target).prev().addClass('evaluate3');
+            $(event.target).prev().prev().addClass('evaluate2');
+            $(event.target).prev().prev().prev().addClass('evaluate1');
+            $(event.target).next().removeClass('evaluate5');
+            $(event.target).parent().next().children('.number-four').addClass('evaluate-number4');
+            $(event.target).parent().next().children('.number-three').removeClass('evaluate-number3');
+            $(event.target).parent().next().children('.number-two').removeClass('evaluate-number2');
+            $(event.target).parent().next().children('.number-one').removeClass('evaluate-number1');
+            $(event.target).parent().next().children('.number-five').removeClass('evaluate-number5');
+        }
+
+        function evaluateFive() {
+            $(event.target).addClass('evaluate5');
+            $(event.target).prev().addClass('evaluate4');
+            $(event.target).prev().prev().addClass('evaluate3');
+            $(event.target).prev().prev().prev().addClass('evaluate2');
+            $(event.target).prev().prev().prev().prev().addClass('evaluate1');
+            $(event.target).parent().next().children('.number-five').addClass('evaluate-number5');
+            $(event.target).parent().next().children('.number-four').removeClass('evaluate-number4');
+            $(event.target).parent().next().children('.number-three').removeClass('evaluate-number3');
+            $(event.target).parent().next().children('.number-two').removeClass('evaluate-number2');
+            $(event.target).parent().next().children('.number-one').removeClass('evaluate-number1');
+        }
+
+        //pop-up
+        function showPopup() {
+            $('.grading-scale').toggle('show');
+        }
+
+        function hidePopup() {
+            $('.grading-scale').toggle('show');
+        }
+
+        document.body.addEventListener('click', ()=> {
+            if (event.target === document.querySelector('.grading-scale'))    {
+                hidePopup();
+            }
+        });
+
+        // popup print
+        function showPopupPrint() {
+            $('.print-popup__wrapper').toggle('show');
+        }
+
+        function hidePopupPrint() {
+            $('.print-popup__wrapper').toggle('show');
+        }
+
+        document.body.addEventListener('click', ()=> {
+            if (event.target === document.querySelector('.print-popup__wrapper'))    {
+                hidePopupPrint();
+            }
+        });
+
+        let inputs = [...document.body.querySelectorAll('.all-inputs')];
+
+        $('#6').click(()=> {
+            inputs.map((el)=> {
+                $(el).prop('checked', false);
+            })
+        });
+
+        document.body.addEventListener('click', (target)=> {
+            if (target.target.classList.value === "all-inputs"){
+                $('#6').prop('checked', false);
+            }
+        });
+    </script>
+</body>
+</html>
